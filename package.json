@@ -1,0 +1,20 @@
+{
+  "name": "hdd-widget-app",
+  "version": "1.0.0",
+  "description": "HDD widget menubar electron app",
+  "dependencies": {
+    "menubar": "4.1.1",
+    "pretty-bytes": "^2.0.1",
+    "diskusage": "0.1.5"
+  },
+  "devDependencies": {
+    "electron-packager": "^5.1.0",
+    "electron-prebuilt": "^0.36.0"
+  },
+  "main": "main.js",
+  "scripts": {
+    "build:osx": "electron-packager . HDD-widget --platform=darwin --arch=x64 --version=0.36.0 --icon=Icon.icns",
+    "build:win": "electron-packager . HDD-widget --platform=win32 --arch=x64 --version=0.36.0",
+    "start": "electron ."
+  }
+}

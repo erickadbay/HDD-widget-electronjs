@@ -1,0 +1,59 @@
+@font-face {
+    font-family: BrandonGrotesqueMed;
+    src: url(../fonts/BrandonGrotesque-Medium.ttf);
+}
+
+html, body{
+    overflow: hidden;
+    height: 100%;
+}
+p{
+    font-family: 'BrandonGrotesqueMed';
+    font-size: 12px;
+}
+
+#slider-total{
+  background-color: #045D7F;
+}
+
+#slider-free{
+  border:none;
+  background-color: #F23301;
+  z-index:2;
+}
+
+#slider-free p{
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    font-size: 10px;
+}
+
+#slider-total, #slider-free{
+  height:20px;
+  border-radius: 3px;
+}
+
+#slider-total, #slider-free, #legend-icon{
+  border-radius: 3px;
+}
+
+#amounts p{
+    text-align: right;
+}
+
+#legend-icon{
+    width: 15px;
+    height: 15px;
+	background: #F23301;
+    display: inline-block;
+}
+
+#legend-icon, #legend-text{
+    margin-top: 10px;
+    float: left;
+}
+
+#legend-text{
+    padding-left: 5px;
+}

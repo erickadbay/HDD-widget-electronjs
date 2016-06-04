@@ -1,0 +1,25 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <!-- Insert this line above script imports  -->
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+    <!-- normal script imports etc  -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Insert this line after script imports -->
+    <script>if (window.module) module = window.module;</script>
+    <title>Example App</title>
+</head>
+<body>
+    <div id="amounts"></div>
+    <div id="slider-total">
+        <div id="slider-free"></div>
+    </div>
+    <div id="legend">
+        <div id="legend-icon"></div>
+        <p id="legend-text">Free space</p>
+    </div>
+</body>
+<script src="js/index.js"></script>
+</html>
