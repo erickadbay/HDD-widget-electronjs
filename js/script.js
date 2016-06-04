@@ -14,7 +14,7 @@ function getUsage(){
         total=info.total;
         freeInBytes = prettyBytes(free);
         totalInBytes = prettyBytes(total);
-        percent = (free/total *100).toFixed(2);
+        percent = 100-(free/total *100).toFixed(2);
         //console.log("Free space: "+free);
     });
 }
@@ -26,6 +26,7 @@ function checkDiskUsage(){
     if (percent>=20){
         $('#slider-free').html("<p>"+percent+"%</p>");
     }
+
     $('#amounts').html("<p>"+freeInBytes+" free of "+totalInBytes+"</p>");
 }
 //console.log("First time only");
