@@ -1,26 +1,32 @@
-var prettyBytes = require('pretty-bytes');
 var os = require('os');
 var disk = require('diskusage');
+var prettyBytes = require('pretty-bytes');
 var WebFrame = require('web-frame');
 
 WebFrame.setZoomLevelLimits(1,1);//Disables zoom
 
 var free, total, freeInBytes, totalInBytes, percent;
-var stats={};
 
-function getUsage(){
-    disk.check('/', function(err, info) {
+function getPlatform(){
+    if (os.platform()=='darwin' || os.platform()=='linux' ){
+        return '/';
+    }else if(os.platform()=='win32'){
+        return 'c:';
+    }
+}
+
+function getUsage(platform){
+    disk.check(platform(), function(err, info) {
         free=info.available;
         total=info.total;
         freeInBytes = prettyBytes(free);
         totalInBytes = prettyBytes(total);
         percent = 100-(free/total *100).toFixed(2);
-        //console.log("Free space: "+free);
     });
 }
 
 function checkDiskUsage(){
-    getUsage();
+    getUsage(getPlatform);
     $('#slider-free').css("width",percent+"%");
 
     if (percent>=20){

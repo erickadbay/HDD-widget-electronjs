@@ -3,7 +3,7 @@ var menubar = require('menubar');
 var mb = menubar({
     height: 100,
     width: 300,
-    resizable: true,
+    resizable: false,
     useContentSize: true
 });
 
