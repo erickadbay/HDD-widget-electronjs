@@ -2,7 +2,7 @@
 Little widget for Windows and OSX (Thanks Apple /s) to show how much disk space you have left.
 
 ### OSX
-[OSX demo]: https://github.com/erickadbay/HDD-widget-electronjs/img/demo.png "HDD-widget demo OSX"
+![screenshot](img/demo.png)
 
 ###### Build Instructions
 Execute the following command to install all the necessary node dependencies:
