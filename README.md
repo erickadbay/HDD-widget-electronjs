@@ -1,7 +1,6 @@
 # HDD-widget
 Little widget for Windows and OSX (Thanks Apple /s) to show how much disk space you have left.
 
-### OSX
 ![screenshot](img/demo.png)
 
 ###### Build Instructions
