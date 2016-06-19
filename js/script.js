@@ -7,13 +7,13 @@ WebFrame.setZoomLevelLimits(1,1);//Disables zoom
 
 var free, total, freeInBytes, totalInBytes, percent;
 
-function getPlatform(){
+var getPlatform = function (){
     if (os.platform()=='darwin' || os.platform()=='linux' ){
         return '/';
     }else if(os.platform()=='win32'){
         return 'c:';
     }
-}
+};
 
 function getUsage(platform){
     disk.check(platform(), function(err, info) {
@@ -28,11 +28,9 @@ function getUsage(platform){
 function checkDiskUsage(){
     getUsage(getPlatform);
     $('#slider-free').css("width",percent+"%");
-
     if (percent>=20){
         $('#slider-free').html("<p>"+percent+"%</p>");
     }
-
     $('#amounts').html("<p>"+freeInBytes+" free of "+totalInBytes+"</p>");
 }
 //console.log("First time only");

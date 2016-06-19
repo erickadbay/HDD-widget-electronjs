@@ -1,26 +1,29 @@
 # HDD-widget
-Little widget for Windows and OSX (Thanks Apple /s) to show how much disk space you have left.
+Little widget for Linux and OS X (Thanks Apple /s) that lives on your menubar that show you how much disk space you have left.
 
 ![screenshot](img/demo.png)
 
-###### Build Instructions
+#### Build Instructions
 Execute the following command to install all the necessary node dependencies:
 ```
 npm install
 ```
 
-To build the app for OSX, execute the following command:
+###### OS X
+To build the app for OS X, please execute the following command:
 ```
 npm run build:osx
 ```
 
-To build the app for Windows, execute the following command:
+Now please navigate the "HDD-widget-darwin-x64" directory and copy the "HDD-widget.app" file into your Applications directory.
+
+###### Linux
+To build the app for Linux, please execute the following command:
 ```
-npm run build:win
+npm run build:linux
 ```
 
-For OSX users, navigate the "HDD-widget-darwing-x64" directory and copy the "HDD-widget.app" file into your Applications directory.
+Now please navigate the "HDD-widget-linux-x64" directory and run the "HDD-widget" UNIX executable.
 
-For Windows users, navigate the "HDD-widget-win32-x64" and run the executable "HDD-widget.exe" to install.
 
 Enjoy!
